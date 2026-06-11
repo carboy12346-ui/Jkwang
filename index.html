@@ -1,1 +1,169 @@
+```html
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>건설안전관리자 포털</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .active-section { display: block; }
+        .hidden-section { display: none; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900 font-sans">
+
+    <!-- 내비게이션 -->
+    <nav class="bg-blue-800 text-white p-4 shadow-lg">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-xl font-bold">Safety Manager Portal</h1>
+            <ul class="flex space-x-4">
+                <li><button onclick="showSection('profile')" class="hover:text-blue-200">프로필</button></li>
+                <li><button onclick="showSection('laws')" class="hover:text-blue-200">법령</button></li>
+                <li><button onclick="showSection('shared')" class="hover:text-blue-200">공유게시판</button></li>
+                <li><button onclick="showSection('free')" class="hover:text-blue-200">자유게시판</button></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 메인 컨텐츠 영역 -->
+    <main class="container mx-auto p-6">
+        
+        <!-- 프로필 섹션 -->
+        <section id="profile" class="section active-section bg-white p-8 rounded-lg shadow-md">
+            <h2 class="text-2xl font-bold mb-4">프로필</h2>
+            <div class="flex items-center space-x-6">
+                <div class="w-24 h-24 bg-gray-300 rounded-full flex items-center justify-center text-gray-600">사진</div>
+                <div>
+                    <p class="text-lg font-semibold">이정관 안전관리자</p>
+                    <p class="text-gray-600">건설안전기사 / 산업안전지도사</p>
+                    <p class="text-gray-500 text-sm mt-2">안전하고 행복한 건설 현장을 만듭니다.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 법령 섹션 -->
+        <section id="laws" class="section hidden-section bg-white p-8 rounded-lg shadow-md">
+            <h2 class="text-2xl font-bold mb-4">주요 건설 안전 법령</h2>
+            <ul class="list-disc ml-6 space-y-2 text-blue-700">
+                <li><a href="#" class="hover:underline">산업안전보건법 (국가법령정보센터)</a></li>
+                <li><a href="#" class="hover:underline">중대재해처벌법 안내</a></li>
+                <li><a href="#" class="hover:underline">건설기술 진흥법</a></li>
+            </ul>
+        </section>
+
+        <!-- 공유게시판 섹션 -->
+        <section id="shared" class="section hidden-section bg-white p-8 rounded-lg shadow-md">
+            <h2 class="text-2xl font-bold mb-4">자료 공유게시판</h2>
+            <table class="w-full text-left border-collapse">
+                <thead><tr class="border-b"><th>제목</th><th>작성자</th><th>날짜</th></tr></thead>
+                <tbody>
+                    <tr><td class="py-2">위험성평가 가이드라인.pdf</td><td>관리자</td><td>2026.06.10</td></tr>
+                    <tr><td class="py-2">안전교육 일지 양식</td><td>안전팀</td><td>2026.06.09</td></tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- 자유게시판 섹션 -->
+        <section id="free" class="section hidden-section bg-white p-8 rounded-lg shadow-md">
+            <h2 class="text-2xl font-bold mb-4">자유게시판</h2>
+            <textarea class="w-full border p-2 rounded mb-4" placeholder="현장의 고민을 나눠보세요."></textarea>
+            <button class="bg-blue-600 text-white px-4 py-2 rounded">글쓰기</button>
+        </section>
+    </main>
+
+    <script>
+        function showSection(id) {
+            document.querySelectorAll('.section').forEach(s => s.classList.add('hidden-section'));
+            document.getElementById(id).classList.remove('hidden-section');
+        }
+    </script>
+</body>
+</html>
+
+```
+```html
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>건설안전관리자 포털</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .active-section { display: block; }
+        .hidden-section { display: none; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900 font-sans">
+
+    <!-- 내비게이션 -->
+    <nav class="bg-blue-800 text-white p-4 shadow-lg">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-xl font-bold">Safety Manager Portal</h1>
+            <ul class="flex space-x-4">
+                <li><button onclick="showSection('profile')" class="hover:text-blue-200">프로필</button></li>
+                <li><button onclick="showSection('laws')" class="hover:text-blue-200">법령</button></li>
+                <li><button onclick="showSection('shared')" class="hover:text-blue-200">공유게시판</button></li>
+                <li><button onclick="showSection('free')" class="hover:text-blue-200">자유게시판</button></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 메인 컨텐츠 영역 -->
+    <main class="container mx-auto p-6">
+        
+        <!-- 프로필 섹션 -->
+        <section id="profile" class="section active-section bg-white p-8 rounded-lg shadow-md">
+            <h2 class="text-2xl font-bold mb-4">프로필</h2>
+            <div class="flex items-center space-x-6">
+                <div class="w-24 h-24 bg-gray-300 rounded-full flex items-center justify-center text-gray-600">사진</div>
+                <div>
+                    <p class="text-lg font-semibold">이정관 안전관리자</p>
+                    <p class="text-gray-600">건설안전기사 / 산업안전지도사</p>
+                    <p class="text-gray-500 text-sm mt-2">안전하고 행복한 건설 현장을 만듭니다.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 법령 섹션 -->
+        <section id="laws" class="section hidden-section bg-white p-8 rounded-lg shadow-md">
+            <h2 class="text-2xl font-bold mb-4">주요 건설 안전 법령</h2>
+            <ul class="list-disc ml-6 space-y-2 text-blue-700">
+                <li><a href="#" class="hover:underline">산업안전보건법 (국가법령정보센터)</a></li>
+                <li><a href="#" class="hover:underline">중대재해처벌법 안내</a></li>
+                <li><a href="#" class="hover:underline">건설기술 진흥법</a></li>
+            </ul>
+        </section>
+
+        <!-- 공유게시판 섹션 -->
+        <section id="shared" class="section hidden-section bg-white p-8 rounded-lg shadow-md">
+            <h2 class="text-2xl font-bold mb-4">자료 공유게시판</h2>
+            <table class="w-full text-left border-collapse">
+                <thead><tr class="border-b"><th>제목</th><th>작성자</th><th>날짜</th></tr></thead>
+                <tbody>
+                    <tr><td class="py-2">위험성평가 가이드라인.pdf</td><td>관리자</td><td>2026.06.10</td></tr>
+                    <tr><td class="py-2">안전교육 일지 양식</td><td>안전팀</td><td>2026.06.09</td></tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- 자유게시판 섹션 -->
+        <section id="free" class="section hidden-section bg-white p-8 rounded-lg shadow-md">
+            <h2 class="text-2xl font-bold mb-4">자유게시판</h2>
+            <textarea class="w-full border p-2 rounded mb-4" placeholder="현장의 고민을 나눠보세요."></textarea>
+            <button class="bg-blue-600 text-white px-4 py-2 rounded">글쓰기</button>
+        </section>
+    </main>
+
+    <script>
+        function showSection(id) {
+            document.querySelectorAll('.section').forEach(s => s.classList.add('hidden-section'));
+            document.getElementById(id).classList.remove('hidden-section');
+        }
+    </script>
+</body>
+</html>
+
+```
 
